@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Accordion from "./components/Accordion";
 
-function App() {
+const App = () => {
+  const data = [
+    {
+      id: 1,
+      title: "Q(1) - What is React?",
+      content: "React is a JavaScript library for building user interfaces.",
+    },
+    {
+      id: 2,
+      title: "Q(2) - Why use React?",
+      content:
+        "React is popular because it makes building user interfaces easy and efficient.",
+    },
+    {
+      id: 3,
+      title: "Q(3) - How do I get started with React?",
+      content:
+        "You can get started with React by installing the React package and creating a React application.",
+    },
+    {
+      id: 4,
+      title: "Q(4) - What are the key features of React?",
+      content:
+        "React has a declarative API, a component-based architecture, and a virtual DOM for efficient rendering.",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-[85%] mx-auto flex justify-center mt-5">
+      <Accordion data={data} />
     </div>
   );
-}
+};
 
 export default App;
