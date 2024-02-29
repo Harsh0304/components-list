@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
+import Header from "./Header";
 const Accordion = ({ data }) => {
   const [activeItem, setActiveItem] = useState(-1);
 
@@ -8,9 +9,7 @@ const Accordion = ({ data }) => {
   };
   return (
     <div>
-      <h1 className="text-center mb-5 pb-2 text-xl font-bold border-b-2 rounded-lg border-green-700">
-        Accordion
-      </h1>
+      <Header heading="Accordion" />
       {data.map((item, index) => {
         return (
           <div className="flex flex-col w-[416px]" key={item.id}>

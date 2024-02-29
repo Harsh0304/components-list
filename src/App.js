@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from "./components/Accordion";
+import Dropdown from "./components/Dropdown";
 
 const App = () => {
   const data = [
@@ -27,9 +28,24 @@ const App = () => {
         "React has a declarative API, a component-based architecture, and a virtual DOM for efficient rendering.",
     },
   ];
+  const dropDownData = [
+    {
+      id: 1,
+      title: "Apple",
+    },
+    {
+      id: 2,
+      title: "Banana",
+    },
+    {
+      id: 3,
+      title: "Orange",
+    },
+  ];
   return (
     <div className="w-[85%] mx-auto flex justify-center mt-5">
-      <Accordion data={data} />
+      {/* <Accordion data={data} /> */}
+      <Dropdown dropDownData={dropDownData} />
     </div>
   );
 };
