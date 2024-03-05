@@ -1,6 +1,10 @@
 import React from "react";
 import Accordion from "./components/Accordion";
 import Dropdown from "./components/Dropdown";
+import Model from "./components/Model";
+import { Route, Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
 
 const App = () => {
   const data = [
@@ -43,10 +47,25 @@ const App = () => {
     },
   ];
   return (
-    <div className="w-[85%] mx-auto flex justify-center mt-5">
-      {/* <Accordion data={data} /> */}
-      <Dropdown dropDownData={dropDownData} />
-    </div>
+    <>
+      <h2 className="text-green-700 bg-gray-900 pl-5 text-xl py-4 uppercase  w-[13rem]  shadow-xl">
+        Component <span className="text-white">List</span>
+      </h2>
+      <div className="flex">
+        <Sidebar />
+        <div className="w-[85%] mx-auto flex justify-center mt-5">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/accordion" element={<Accordion data={data} />} />
+            <Route
+              path="/dropdown"
+              element={<Dropdown dropDownData={dropDownData} />}
+            />
+            <Route path="/model" element={<Model />} />
+          </Routes>
+        </div>
+      </div>
+    </>
   );
 };
 
