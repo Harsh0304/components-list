@@ -23,7 +23,7 @@ const Dropdown = ({ dropDownData }) => {
     setIsOpen(false);
   };
   return (
-    <>
+    <div>
       <Header heading="Dropdown" />
       <div ref={devRef} className="flex flex-col gap-1 items-center">
         <h2
@@ -48,7 +48,7 @@ const Dropdown = ({ dropDownData }) => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
