@@ -28,12 +28,12 @@ const Dropdown = ({ dropDownData }) => {
       <div ref={devRef} className="flex flex-col gap-1 items-center">
         <h2
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-green-800 text-white py-2 cursor-pointer rounded-lg text-xl px-14"
+          className="bg-green-800 shadow-xl text-white py-2 cursor-pointer rounded-lg text-xl px-14"
         >
           {selectedItem}
         </h2>
         {isOpen && (
-          <div className="bg-green-800 text-white py-2 text-xl rounded-lg px-14">
+          <div className="bg-green-800 shadow-lg text-white py-2 text-xl rounded-lg px-14">
             {dropDownData?.map((item, index) => {
               return (
                 <div

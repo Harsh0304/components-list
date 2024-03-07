@@ -13,7 +13,7 @@ const Accordion = ({ data }) => {
       {data.map((item, index) => {
         return (
           <div className="flex flex-col w-[416px]" key={item.id}>
-            <div className="bg-green-700 mt-5 pl-4 py-3 text-white ">
+            <div className="bg-green-700 shadow-xl mt-5 pl-4 py-3 text-white ">
               <div
                 className="flex justify-between pr-9 cursor-pointer"
                 onClick={() => handleClick(index)}

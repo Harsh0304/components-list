@@ -12,7 +12,7 @@ const Model = () => {
     <div>
       <Header heading="Model" />
       <button
-        className="bg-green-800 text-white text-xl p-2"
+        className="bg-green-800 shadow-lg text-white text-xl p-2"
         onClick={handleClick}
       >
         Show Model
